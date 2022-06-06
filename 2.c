@@ -3,12 +3,12 @@
 int main() {
     int a, b, c;
     
-    printf("Insira as medidas do triângulo:\n");
-    printf("Primeiro lado: ");
+    printf("Insira os valores:\n");
+    printf("Primeiro valor: ");
     scanf("%df", &a);
-    printf("Segundo lado: ");
+    printf("Segundo valor: ");
     scanf("%df", &b);
-    printf("Terceiro lado: ");
+    printf("Terceiro valor: ");
     scanf("%df", &c);
     
     if (a > c) {
