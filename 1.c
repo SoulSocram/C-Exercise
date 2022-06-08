@@ -2,27 +2,29 @@
 
 int main (){
 
-    float a, b, c;
-
-    printf("Insira os lados do triângulo:\n");
-    printf("Primeiro lado: ");
-    scanf("%ff", &a);
-    printf("Segundo lado: ");
-    scanf("%ff", &b);
-    printf("Terceiro lado: ");
-    scanf("%ff", &c);
-
-    if(a + b > c && a + c > b && b + c > a){
-        printf("Os 3 lados formam um triangulo!\n");
-        if(a == b && a == c)
-            printf("Equilatero\n");
-        else if(a == b || a == c || b == c)
-            printf("Isosceles\n");
-        else
-            printf("Escaleno\n");
-    } else {
-        printf("Não é um triângulo!\n");
-    }
+    double a, b, c;
     
-    return 0;
+    printf("Insira as medidas do triângulo:\n");
+    printf("Primeiro lado: ");
+    scanf("%lf", &a);
+    printf("Segundo lado: ");
+    scanf("%lf", &b);
+    printf("Terceiro lado: ");
+    scanf("%lf", &c);
+
+   if (a>=b+c || b>=c+a || c>=a+b) {
+      puts("Triangulo inexistente.");
+      exit(1);
+   }
+
+   if (a==b && b==c)
+      puts("Equilatero");
+
+   else if (a==b || b==c || c==a)
+      puts("Isósceles.");
+
+   else
+      puts("Escaleno.");
+
+   return 0;
 }
