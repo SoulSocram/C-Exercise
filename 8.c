@@ -16,7 +16,7 @@ int main (){
     printf("Y2: ");
     scanf("%ff", &y2);
 
-    resultado = sqrt(16);
+    resultado = sqrt(pow((x2-x1), 2) + pow((y2-y1),2));
 
     printf("\nResultado: %f", resultado);
     
