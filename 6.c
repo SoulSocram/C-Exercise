@@ -1,4 +1,3 @@
-//Sexo, cor dos olhos, cor dos cabeos, idade em anos
 #include <stdio.h>
 #include <math.h> 
 
