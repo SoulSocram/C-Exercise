@@ -13,18 +13,18 @@ int main (){
     scanf("%lf", &c);
 
    if (a>=b+c || b>=c+a || c>=a+b) {
-      puts("Triangulo inexistente.");
+      printf("\nTriangulo inexistente.");
       exit(1);
    }
 
    if (a==b && b==c)
-      puts("Equilatero");
+      printf("\nEquilatero");
 
    else if (a==b || b==c || c==a)
-      puts("Isósceles.");
+      printf("\nIsósceles.");
 
    else
-      puts("Escaleno.");
+      printf("\nEscaleno.");
 
    return 0;
 }
