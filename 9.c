@@ -1,39 +1,26 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
+#include <math.h> 
 
-main() {
-    float porcentagemFeminina;
-    int idade, maiorIdade, contPorcentagem, cont;
-    char sexo[40], corOlhos[40], corCabelos[40];
+int main (){
 
-    contPorcentagem = 0;
-    maiorIdade = 0;
-    cont = 0;
+    float a, b, c, d, e, f, x, y;
 
-    do {
-        
-        cont++;
-        printf("Informe o sexo (feminino | masculino):\n");
-        scanf("%s", &sexo);
-        printf("Informe a cor dos olhos(azuis | verdes | castanhos | pretos):\n");
-        scanf("%s", &corOlhos);
-        printf("Informe a cor dos cabelos(castanhos | loiros | ruivos):\n");
-        scanf("%s", &corCabelos);
-        printf("Informe a idade:\n");
-        scanf("%d", &idade);
+    
+    printf("Para as seguintes equações lineares:\nax + by = c | dx + ey = f\n\nDigite os valores:");
+    printf("a: ");
+    scanf("%ff", &a);
+    printf("b: ");
+    scanf("%ff", &b);
+    printf("c: ");
+    scanf("%ff", &c);
+    printf("d: ");
+    scanf("%ff", &d);
+    printf("e: ");
+    scanf("%ff", &e);
 
-        if ((strcmp (sexo,"feminino") == 0) && ((idade >= 18) && (idade <= 35)) && (strcmp (corOlhos,"verdes") == 0) && (strcmp (corCabelos,"loiros") == 0)) {
-            contPorcentagem++;
-        }
+    x = (c*e - b*f)/(a*e - b*d);
+    y = (a*f - c*d)/(a*e - b*d);
 
-        if (idade > maiorIdade) {
-            maiorIdade = idade;
-        }
-    }
-    while (idade != -1);
-
-    printf("Maior idade: %d\n", maiorIdade);
-    porcentagemFeminina = (100 * contPorcentagem)/cont;
-    printf("Porcentagem feminina com olhos verdes, cabelos louros que estão entre 18 e 35 anos: %.2f\n", porcentagemFeminina);
+    printf("\nResultado:\nx = %f | y = %f", x, y);
+    
 }
